@@ -16,16 +16,14 @@ public class Calculator {
         }
         return result;
     }
-    public double dev(double num1, double num2) {
-        double result =1;
-        if (num2 != 0) {
-            result = num1 / num2;
-        } else {
-            System.out.println("Нельзя делить на ноль");;
+    public double dev(List<? extends Number> list) {
+        double res = list.get(0).doubleValue();
+        for (int i = 1; i < list.size(); i++) {
+            res = res / list.get(i).doubleValue();
         }
-        return result;
-
+        return res;
     }
+
 
 
 
